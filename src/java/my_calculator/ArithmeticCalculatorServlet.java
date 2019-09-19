@@ -19,8 +19,9 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setAttribute ("whatever2", "Result: ---"); 
         getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
-
+        
     }
 //WORKING
     @Override
@@ -28,7 +29,8 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             throws ServletException, IOException {
         
         //working here
-        request.setAttribute ("whatever2", "---"); 
+        
+        //
         
         String message = "Result: ";
         
